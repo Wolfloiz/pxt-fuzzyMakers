@@ -2,6 +2,7 @@
  * Biblioteca de atuadores do Fuzzy bits
  */
 //% block="Atuadores" weight=200 color=#89D333 icon="\uf109"
+//% groups="['Motor CC', 'Servo Motor']"
 namespace actuators {
     /**
     *  Define a velocidade do motor.
@@ -11,6 +12,7 @@ namespace actuators {
     //% weight = 10
     //% speed.min = 0
     //% speed.max = 9
+    //% group="Motor CC"
     export function SetSpeedMotor(speed: number, pin: OutputPorts) {
         pins.analogWritePin(pin, Math.map(speed, 0, 9, 0, 1023))
     }
@@ -21,6 +23,7 @@ namespace actuators {
     */
     //% blockId=directionMotorIO block="Motor CC, definir direção do motor para %direction na porta %pin"
     //% weight = 10
+    //% group="Motor CC"
     export function SetDirectionMotor(direction: MotorDirection, pin: OutputPorts) {
         if (direction == MotorDirection.clockwise)
             pins.digitalWritePin(pin, 0)
@@ -36,6 +39,7 @@ namespace actuators {
     //% weight = 10
     //% deg.min = 0
     //% deg.max = 180
+    //% group="Servo Motor"
     export function SetAngleServo(deg: number, pin: OutputPorts) {
         pins.analogWritePin(pin, Math.map(deg, 0, 180, 0, 1023))
     }
@@ -48,6 +52,7 @@ namespace actuators {
     //% weight = 10
     //% deg.min = 0
     //% deg.max = 180
+    //% group="Servo Motor"
     export function SetAngleServoKnob(deg: number, pin: OutputPorts) {
         pins.analogWritePin(pin, Math.map(deg, 0, 180, 0, 1023))
     }
