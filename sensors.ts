@@ -23,6 +23,7 @@ enum MotorDirection {
     * Biblioteca de sensores do Fuzzy bit
     */
     //% block="Sensores" weight=150 color=#F4361C icon="\uf11c"
+    //% groups="['Botão', 'Infravermelho', 'Poteciômetro']"
     namespace sensors {
     /**
      * Obtem o valor do botão na porta determinada.
@@ -30,6 +31,7 @@ enum MotorDirection {
      */
     //% blockId=buttonIO block="Valor do Botão na porta %pin"
     //% weight = 10
+    //% group="Botão"
     export function buttonValue(pin: InputPorts): number {
         return pins.digitalReadPin(pin);
     }
@@ -40,6 +42,7 @@ enum MotorDirection {
      */
     //% blockId=dimmerIO block="Valor do potenciômetro na porta %pin"
     //% weight = 10
+    //% group="Poteciômetro"
     export function dimmerValue(pin: InputPorts): number {
         return pins.analogReadPin(pin);
     }
@@ -50,6 +53,7 @@ enum MotorDirection {
      */
     //% blockId=infraredIO block="Valor do sensor infravermelho na porta %pin"
     //% weight = 10
+    //% group="Infravermelho"
     export function infraRedValue(pin: InputPorts): number {
         return pins.digitalReadPin(pin);
     }
