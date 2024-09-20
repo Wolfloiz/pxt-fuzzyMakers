@@ -2,7 +2,7 @@
  * @file pxt-fuzzyMakers/fuzzyBot.ts
 */
 
-const MOTER_ADDRESSS = 0x10
+const MOTOR_ADDRESSS = 0x10
 
 
 enum state {
@@ -19,7 +19,7 @@ interface KV {
     action: Action;
 }
 
-//% weight=100 color=#1e88e5 icon="\uf441" block="Fuzzy Bot"
+//% weight=100 color=#1e88e5 icon="\uf1b9" block="Fuzzy Bot"
 //% groups=['micro:bit(v2)']
 namespace fuzzyBot {
     let kbCallback: KV[] = []

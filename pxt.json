@@ -6,13 +6,15 @@
     },
     "files": [
         "README.md",
-        "fuzzybot.ts"
+        "fuzzybot.ts",
+        "actuators.ts",
+        "sensors.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.28",
+        "target": "7.0.42",
         "targetId": "microbit"
     },
     "supportedTargets": [
