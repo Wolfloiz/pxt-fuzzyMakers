@@ -44,7 +44,8 @@ enum MotorDirection {
     //% weight = 10
     //% group="Poteciômetro"
     export function dimmerValue(pin: InputPorts): number {
-        return pins.analogReadPin(pin);
+        let analogReadPort = pins.analogReadPin(pin);
+        return Math.map(analogReadPort, 0, 9, 0, 1023);
     }
 
     /**
@@ -54,7 +55,8 @@ enum MotorDirection {
     //% blockId=infraredIO block="Valor do sensor infravermelho na porta %pin"
     //% weight = 10
     //% group="Infravermelho"
-    export function infraRedValue(pin: InputPorts): number {
-        return pins.digitalReadPin(pin);
+    export function infraredValue(pin: InputPorts): number {
+        let analogReadPort = pins.analogReadPin(pin);
+        return Math.map(analogReadPort, 0, 9, 0, 1023);
     }
 }
