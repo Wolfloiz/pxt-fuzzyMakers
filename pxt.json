@@ -1,5 +1,6 @@
 {
     "name": "Fuzzy Makers",
+    "version": "0.0.2",
     "description": "Uma extensão para o micro:bit dos kits Fuzzy Makers.",
     "dependencies": {
         "core": "*"
