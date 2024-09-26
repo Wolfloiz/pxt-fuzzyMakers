@@ -11,7 +11,7 @@ namespace actuators {
     //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed do motor na porta %pin"
     //% weight = 10
     //% speed.min = 0
-    //% speed.max = 10
+    //% speed.max = 9
     //% group="Motor CC"
     export function SetSpeedMotor(speed: number, pin: OutputPorts) {
         pins.analogWritePin(pin, Math.map(speed, 0, 9, 0, 1023))
