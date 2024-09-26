@@ -30,7 +30,7 @@ enum MotorDirection {
      * @param porta de entrada da placa de expansão.
      */
     //% blockId=buttonIO block="Valor do Botão na porta %pin"
-    //% weight = 10
+    //% weight=10
     //% group="Botão"
     export function buttonValue(pin: InputPorts): number {
         return pins.digitalReadPin(pin);
@@ -41,7 +41,7 @@ enum MotorDirection {
      * @param porta de entrada da placa de expansão.
      */
     //% blockId=dimmerIO block="Valor do potenciômetro na porta %pin"
-    //% weight = 10
+    //% weight=10
     //% group="Poteciômetro"
     export function dimmerValue(pin: InputPorts): number {
         let analogReadPort = pins.analogReadPin(pin);
@@ -54,7 +54,7 @@ enum MotorDirection {
      * @param porta de entrada da placa de expansão.
      */
     //% blockId=infraredIO block="Valor do sensor infravermelho na porta %pin"
-    //% weight = 10
+    //% weight=10
     //% group="Infravermelho"
     export function infraredValue(pin: InputPorts): number {
         let analogReadPort = pins.analogReadPin(pin);
