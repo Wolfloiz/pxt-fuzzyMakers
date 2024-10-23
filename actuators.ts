@@ -8,12 +8,23 @@ namespace actuators {
     *  Define a velocidade do motor.
     * @param porta de saída da placa de expansão.
     */
-    //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed\\% do motor na porta %pin"
+    //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed do motor na porta %pin"
     //% speed.min=0 speed.max=9
     //% group="Motor CC"
-    //% weight=10
+    //% weight=20
     export function SetSpeedMotor(speed: number, pin: OutputPorts) {
         pins.analogWritePin(pin, Math.map(speed, 0, 9, 0, 1023))
+    }
+
+    /**
+    *  Parar o motor na porta definida
+    * @param porta de saída da placa de expansão.
+    */
+    //% blockId=stopMotorIO block="Motor CC, parar motor na porta %pin"
+    //% group="Motor CC"
+    //% weight=15
+    export function StopMotor( pin: OutputPorts) {
+        pins.analogWritePin(pin, 0);
     }
 
     /**
