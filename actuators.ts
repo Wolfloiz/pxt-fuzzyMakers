@@ -9,13 +9,12 @@ namespace actuators {
     * @param porta de saída da placa de expansão.
     */
     //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed do motor na porta %pin"
-    //% speed.min=0 speed.max=9
+    //% speed.min=0 speed.max=1023
     //% group="Motor CC"
     //% weight=20
     export function SetSpeedMotor(speed: number, pin: OutputPorts) {
-        pins.analogWritePin(pin, Math.map(speed, 0, 9, 0, 1023))
+        pins.analogWritePin(pin, speed)
     }
-
     /**
     *  Parar o motor na porta definida
     * @param porta de saída da placa de expansão.
@@ -47,11 +46,11 @@ namespace actuators {
     */
     //% blockId=angleServoMotorIO block="Servo motor, definir ângulo %deg do servo motor na porta %pin no modo sweep"
     //% deg.min=0
-    //% deg.max=180
+    //% deg.max=1023
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServo(deg: number, pin: OutputPorts) {
-        pins.analogWritePin(pin, Math.map(deg, 0, 180, 0, 1023))
+        pins.analogWritePin(pin, deg)
     }
 
     /**
@@ -60,10 +59,10 @@ namespace actuators {
     */
     //% blockId=angleServoKnobIO block="Servo motor, definir ângulo %deg do servo motor na porta %pin no modo knob"
     //% deg.min=0
-    //% deg.max=180
+    //% deg.max=1023
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoKnob(deg: number, pin: OutputPorts) {
-        pins.analogWritePin(pin, Math.map(deg, 0, 180, 0, 1023))
+        pins.analogWritePin(pin, deg)
     }
 }
