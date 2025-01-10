@@ -4,19 +4,21 @@
     "description": "Uma extensão para o micro:bit dos kits Fuzzy Makers.",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "datalogger": "*"
     },
     "files": [
         "README.md",
         "fuzzybot.ts",
         "actuators.ts",
-        "sensors.ts"
+        "sensors.ts",
+        "table.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "7.0.51",
+        "target": "7.0.57",
         "targetId": "microbit"
     },
     "supportedTargets": [
