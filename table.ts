@@ -8,6 +8,12 @@
 
 //% block="Registro de dados" weight=300 color=#378250 icon="\uf0ce"
 namespace table {
+     enum DeleteType {
+        //% block="rápido"
+        Fast,
+        //% block="completo"
+        Full
+    }
 
         /**
          * Uma coluna e um valor para registrar na memória do microbit
@@ -127,7 +133,7 @@ namespace table {
     //% block="Deletar registros||$deleteType"
     //% blockId=dataloggerdeletelogfuzzy
     //% weight=60 help=datalogger/delete-log
-    export function deleteLog(deleteType?: datalogger.DeleteType): void {
+    export function deleteLog(deleteType?: DeleteType): void {
         datalogger.deleteLog(deleteType);
     }
 
