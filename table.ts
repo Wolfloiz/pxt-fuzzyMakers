@@ -8,8 +8,9 @@
 
 //% block="Registro de dados" weight=300 color=#378250 icon="\uf0ce"
 namespace table {
-     enum DeleteType {
-        //% block="rápido"
+
+    enum DeleteType {
+        //% block="rapido"
         Fast,
         //% block="completo"
         Full
