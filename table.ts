@@ -39,16 +39,16 @@ namespace table {
     */
     //% block="Registrar dados $data1||$data2 $data3 $data4 $data5 $data6 $data7 $data8 $data9 $data10"
     //% blockId=dataloggerlogfuzzy
-    //% data1.shadow=dataloggercreatecolumnvalue
-    //% data2.shadow=dataloggercreatecolumnvalue
-    //% data3.shadow=dataloggercreatecolumnvalue
-    //% data4.shadow=dataloggercreatecolumnvalue
-    //% data5.shadow=dataloggercreatecolumnvalue
-    //% data6.shadow=dataloggercreatecolumnvalue
-    //% data7.shadow=dataloggercreatecolumnvalue
-    //% data8.shadow=dataloggercreatecolumnvalue
-    //% data9.shadow=dataloggercreatecolumnvalue
-    //% data10.shadow=dataloggercreatecolumnvalue
+    //% data1.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data2.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data3.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data4.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data5.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data6.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data7.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data8.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data9.shadow=dataloggercreatecolumnvaluefuzzy
+    //% data10.shadow=dataloggercreatecolumnvaluefuzzy
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
     //% weight=100 help=datalogger/log
