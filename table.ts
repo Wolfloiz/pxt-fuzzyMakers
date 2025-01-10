@@ -80,7 +80,7 @@ namespace table {
      * @param col9  "Nome (título) para a nona coluna que vamos adicionar"
      * @param col10 "Nome (título) para a décima coluna que vamos adicionar"
     */
-    //% block="Adicione colunas ao registro de dados $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10"
+    //% block="Adicionar colunas ao registro de dados $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10"
     //% blockId=dataloggersetcolumntitlesfuzzy
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
