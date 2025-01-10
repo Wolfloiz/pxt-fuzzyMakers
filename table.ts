@@ -68,17 +68,46 @@ namespace table {
     }
 
     /**
-     * Define colunas para registrado dados
-     * @param Lista de colunas para registrar dados
-     */
-    //% block="Adicione colunas $cols"
-    //% blockId=dataloggersetcolumnsfuzzy
-    //% data.shadow=list_create_with
-    //% data.defl=datalogger_columnfield
-    //% blockHidden=true
-    //% weight=70
-    export function setColumns(cols: string[]): void {
-       datalogger.setColumns(cols);
+     * Defina colunas para futuro registro de dados
+     * @param col1  "Nome (título) para a primeira coluna que vamos adicionar"
+     * @param col2  "Nome (título) para a segunda coluna que vamos adicionar"
+     * @param col3  "Nome (título) para a terceira coluna que vamos adicionar"
+     * @param col4  "Nome (título) para a quarta coluna que vamos adicionar"
+     * @param col5  "Nome (título) para a quinta coluna que vamos adicionar"
+     * @param col6  "Nome (título) para a sexta coluna que vamos adicionar"
+     * @param col7  "Nome (título) para a sétima coluna que vamos adicionar"
+     * @param col8  "Nome (título) para a oitava coluna que vamos adicionar"
+     * @param col9  "Nome (título) para a nona coluna que vamos adicionar"
+     * @param col10 "Nome (título) para a décima coluna que vamos adicionar"
+    */
+    //% block="Adicione colunas ao registro de dados $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10"
+    //% blockId=dataloggersetcolumntitlesfuzzy
+    //% inlineInputMode="variable"
+    //% inlineInputModeLimit=1
+    //% weight=70 help=datalogger/set-column-titles
+    //% col1.shadow=datalogger_columnfield
+    //% col2.shadow=datalogger_columnfield
+    //% col3.shadow=datalogger_columnfield
+    //% col4.shadow=datalogger_columnfield
+    //% col5.shadow=datalogger_columnfield
+    //% col6.shadow=datalogger_columnfield
+    //% col7.shadow=datalogger_columnfield
+    //% col8.shadow=datalogger_columnfield
+    //% col9.shadow=datalogger_columnfield
+    //% col10.shadow=datalogger_columnfield
+    export function setColumnTitles(
+        col1: string,
+        col2?: string,
+        col3?: string,
+        col4?: string,
+        col5?: string,
+        col6?: string,
+        col7?: string,
+        col8?: string,
+        col9?: string,
+        col10?: string
+    ): void {
+       datalogger.setColumnTitles(col1, col2, col3, col4, col5, col6, col7, col8, col9, col10);
     }
 
     /**
