@@ -9,13 +9,6 @@
 //% block="Registro de dados" weight=300 color=#378250 icon="\uf0ce"
 namespace table {
 
-    class Cell extends datalogger.ColumnValue {
-        constructor(column: string, value: any)
-        {
-            super(column, value)
-        }
-    }
-
         /**
          * Uma coluna e um valor para registrar na memória do microbit
          * @param coluna que será atribuido
@@ -27,8 +20,8 @@ namespace table {
     //% column.shadow=datalogger_columnfield
     //% blockId=dataloggercreatecolumnvaluefuzzy
     //% weight=80 help=datalogger/create-cv
-    export function createCell(column: string, value: any): Cell {
-        return new Cell(column, value);
+    export function createCell(column: string, value: any): datalogger.ColumnValue {
+        return new datalogger.ColumnValue(column, value);
     }
 
     /**
@@ -72,6 +65,20 @@ namespace table {
         data10?: datalogger.ColumnValue
     ): void {
         datalogger.log(data1,data2, data3, data4, data5, data6, data7, data8, data9, data10);
+    }
+
+    /**
+     * Define colunas para registrado dados
+     * @param Lista de colunas para registrar dados
+     */
+    //% block="Adicione colunas $cols"
+    //% blockId=dataloggersetcolumnsfuzzy
+    //% data.shadow=list_create_with
+    //% data.defl=datalogger_columnfield
+    //% blockHidden=true
+    //% weight=70
+    export function setColumns(cols: string[]): void {
+       datalogger.setColumns(cols);
     }
 
     /**
