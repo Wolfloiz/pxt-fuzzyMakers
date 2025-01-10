@@ -10,7 +10,7 @@
 namespace table {
 
     export enum DeleteType {
-        //% block="rapido"
+        //% block="rápido"
         Fast,
         //% block="completo"
         Full
