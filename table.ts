@@ -23,7 +23,7 @@ namespace table {
          * @returns O valor armazenado na memória do microbit 
          */
     //% block="coluna $column valor $value"
-    //% value.shadow=#323232
+    //% value.shadow=math_number
     //% column.shadow=datalogger_columnfield
     //% blockId=dataloggercreatecolumnvaluefuzzy
     //% weight=80 help=datalogger/create-cv
