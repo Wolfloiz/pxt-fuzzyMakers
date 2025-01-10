@@ -6,7 +6,7 @@
  * based on datalogger
  */
 
-//% block="Registro de dados" weight=300 color=#323232 icon="\uf84c"
+//% block="Registro de dados" weight=300 color=#378250 icon="\uf0ce"
 namespace table {
 
     class Cell extends datalogger.ColumnValue {
@@ -19,11 +19,11 @@ namespace table {
         /**
          * Uma coluna e um valor para registrar na memória do microbit
          * @param coluna que será atribuido
-         * @param valor que será amarzenado
+         * @param valor que será armazenado
          * @returns O valor armazenado na memória do microbit 
          */
     //% block="coluna $column valor $value"
-    //% value.shadow=math_number
+    //% value.shadow=#323232
     //% column.shadow=datalogger_columnfield
     //% blockId=dataloggercreatecolumnvaluefuzzy
     //% weight=80 help=datalogger/create-cv
