@@ -85,13 +85,10 @@ namespace actuators {
         while (Math.abs(currentAngle - deg) > step) {
             
             if (currentAngle < deg) {
-                console.log('entrei 1');
                 currentAngle += step;
             } else {
-                console.log('entrei 1');
                 currentAngle -= step;
             }
-                console.log(currentAngle);
             pins.analogWritePin(InputPorts.P0, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
@@ -119,7 +116,7 @@ namespace actuators {
                 currentAngle -= step;
             }
 
-            pins.servoWritePin(pin, currentAngle);
+            pins.analogWritePin(InputPorts.P0, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
     }
