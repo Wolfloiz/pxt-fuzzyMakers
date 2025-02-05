@@ -79,17 +79,20 @@ namespace actuators {
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
-        let currentAngle = pins.analogReadPin(pin);
+        let currentAngle = pins.analogReadPin(InputPorts.P0);
         let step = 2; // Define a taxa de incremento
 
         while (Math.abs(currentAngle - deg) > step) {
+            
             if (currentAngle < deg) {
+                console.log('entrei 1');
                 currentAngle += step;
             } else {
+                console.log('entrei 1');
                 currentAngle -= step;
             }
-
-            pins.servoWritePin(pin, currentAngle);
+                console.log(currentAngle);
+            pins.servoWritePin(InputPorts.P0, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
     }
