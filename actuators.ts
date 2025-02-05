@@ -75,11 +75,12 @@ namespace actuators {
     //% blockId=angleServoKnobGIO block="Definir ângulo %deg de servo motor na porta %pin com velocidade %speed no modo Knob"
     //% deg.min=0
     //% deg.max=1023
+    //% speed.min=0 speed.max=100
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
         let currentAngle = pins.analogReadPin(pin);
-        let step = speed / 10; // Define a taxa de incremento
+        let step = 2; // Define a taxa de incremento
 
         while (Math.abs(currentAngle - deg) > step) {
             if (currentAngle < deg) {
@@ -106,7 +107,7 @@ namespace actuators {
     //% weight=10
     export function SetAngleServoSweepGradually(deg: number, pin: OutputPorts, speed: number) {
         let currentAngle = pins.analogReadPin(pin);
-        let step = speed / 10; // Define a taxa de incremento
+        let step = 2; // Define a taxa de incremento
 
         while (Math.abs(currentAngle - deg) > step) {
             if (currentAngle < deg) {
