@@ -80,7 +80,7 @@ namespace actuators {
     //% weight=10
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
         let currentAngle = pins.analogReadPin(pin);
-        let step = 2; // Define a taxa de incremento
+        let step = speed/10; // Define a taxa de incremento
 
         while (Math.abs(currentAngle - deg) > step) {
             
@@ -89,6 +89,7 @@ namespace actuators {
             } else {
                 currentAngle -= step;
             }
+            console.log(currentAngle);
             pins.analogWritePin(pin, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
@@ -107,7 +108,7 @@ namespace actuators {
     //% weight=10
     export function SetAngleServoSweepGradually(deg: number, pin: OutputPorts, speed: number) {
         let currentAngle = pins.analogReadPin(pin);
-        let step = 2; // Define a taxa de incremento
+        let step = speed / 10; // Define a taxa de incremento
 
         while (Math.abs(currentAngle - deg) > step) {
             if (currentAngle < deg) {
@@ -116,7 +117,7 @@ namespace actuators {
                 currentAngle -= step;
             }
 
-            pins.analogWritePin(InputPorts.P0, currentAngle);
+            pins.analogWritePin(pin, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
     }
