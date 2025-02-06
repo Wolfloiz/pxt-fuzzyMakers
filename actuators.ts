@@ -81,45 +81,50 @@ namespace actuators {
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
         let currentAngle = pins.analogReadPin(pin);
         let step = speed/10; // Define a taxa de incremento
+        console.log('currentAngle: ');
+        console.log(currentAngle);
 
-        while (Math.abs(currentAngle - deg) > step) {
+        while (Math.abs(currentAngle - deg)> step) {
             
             if (currentAngle < deg) {
                 currentAngle += step;
             } else {
                 currentAngle -= step;
             }
+            console.log('incremmental current angle: ')
+            console.log(currentAngle)
+            pins.analogWritePin(pin, Math.clamp(0, 1023, currentAngle));
 
-            pins.analogWritePin(pin, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
+        pins.analogWritePin(pin, deg);
     }
 
-    /**
-        *  Define o ângulo e velocidade de mudança gradualmente para o modo knob do servo motor.
-        * @param porta de saída da placa de expansão.
-        * @param angulo de destino do servo
-        * @param velocidade de movimento do servo
-        */
-    //% blockId=angleServoSweepGIO block="Definir ângulo %deg de servo motor na porta %pin com velocidade %speed no modo Sweep"
-    //% deg.min=0
-    //% deg.max=1023
-    //% group="Servo Motor"
-    //% weight=10
-    export function SetAngleServoSweepGradually(deg: number, pin: OutputPorts, speed: number) {
-        let currentAngle = pins.analogReadPin(pin);
-        let step = speed / 10; // Define a taxa de incremento
+    // /**
+    //     *  Define o ângulo e velocidade de mudança gradualmente para o modo knob do servo motor.
+    //     * @param porta de saída da placa de expansão.
+    //     * @param angulo de destino do servo
+    //     * @param velocidade de movimento do servo
+    //     */
+    // //% blockId=angleServoSweepGIO block="Definir ângulo %deg de servo motor na porta %pin com velocidade %speed no modo Sweep"
+    // //% deg.min=0
+    // //% deg.max=1023
+    // //% group="Servo Motor"
+    // //% weight=10
+    // export function SetAngleServoSweepGradually(deg: number, pin: OutputPorts, speed: number) {
+    //     let currentAngle = pins.analogReadPin(pin);
+    //     let step = speed / 10; // Define a taxa de incremento
 
-        while (Math.abs(currentAngle - deg) > step) {
-            if (currentAngle < deg) {
-                currentAngle += step;
-            } else {
-                currentAngle -= step;
-            }
+    //     while (Math.abs(currentAngle - deg) > step) {
+    //         if (currentAngle < deg) {
+    //             currentAngle += step;
+    //         } else {
+    //             currentAngle -= step;
+    //         }
 
-            pins.analogWritePin(pin, currentAngle);
-            basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
-        }
-    }
+    //         pins.analogWritePin(pin, currentAngle);
+    //         basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
+    //     }
+    // }
     
 }
