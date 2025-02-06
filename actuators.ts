@@ -89,7 +89,7 @@ namespace actuators {
             } else {
                 currentAngle -= step;
             }
-            console.log(currentAngle);
+
             pins.analogWritePin(pin, currentAngle);
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
