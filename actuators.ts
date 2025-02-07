@@ -92,12 +92,13 @@ namespace actuators {
                 currentAngle -= step;
             }
             console.log('incremmental current angle: ')
-            console.log(currentAngle)
-            pins.analogWritePin(pin, Math.clamp(0, 1023, currentAngle));
+            console.log(pins.analogReadPin(pin))
+            pins.analogWritePin(pin, currentAngle);
 
             basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
         }
         pins.analogWritePin(pin, deg);
+        console.log(pins.analogReadPin(pin))
     }
 
     // /**
