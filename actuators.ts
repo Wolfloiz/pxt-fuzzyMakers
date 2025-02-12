@@ -4,6 +4,10 @@
 //% block="Atuadores" weight=200 color=#89D333 icon="\uf109"
 //% groups="['Motor CC', 'Servo Motor']"
 namespace actuators {
+
+    let currentAngle = 0;
+
+    const maxServoValueAnalogWrite = 726;
     /**
     *  Define a velocidade do motor.
     * @param porta de saída da placa de expansão.
@@ -50,7 +54,7 @@ namespace actuators {
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServo(deg: number, pin: OutputPorts) {
-        pins.analogWritePin(pin, deg)
+        pins.analogWritePin(pin, deg);
     }
 
     /**
@@ -63,6 +67,8 @@ namespace actuators {
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoKnob(deg: number, pin: OutputPorts) {
+        currentAngle = deg;
+        console.log(`n actual angle: ${currentAngle}`)
         pins.analogWritePin(pin, deg)
     }
 
@@ -75,30 +81,28 @@ namespace actuators {
     //% blockId=angleServoKnobGIO block="Definir ângulo %deg de servo motor na porta %pin com velocidade %speed no modo Knob"
     //% deg.min=0
     //% deg.max=1023
-    //% speed.min=0 speed.max=100
+    //% speed.min=10 speed.max=100
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
-        let currentAngle = pins.analogReadPin(pin);
-        let step = speed/10; // Define a taxa de incremento
-        console.log('currentAngle: ');
-        console.log(currentAngle);
+        let step = speed / 1.8;  // Define a taxa de incremento
+        let delayTime = Math.map(speed, 10, 100, 100, 0);
+        let auxCurrentAngle = currentAngle;
+        
+        while (Math.abs(auxCurrentAngle - deg)> step) {
+            if (auxCurrentAngle < deg) {
+                auxCurrentAngle += step;
+            } 
 
-        while (Math.abs(currentAngle - deg)> step) {
-            
-            if (currentAngle < deg) {
-                currentAngle += step;
-            } else {
-                currentAngle -= step;
+            if(auxCurrentAngle > deg) {
+                auxCurrentAngle -= step;
             }
-            console.log('incremmental current angle: ')
-            console.log(pins.analogReadPin(pin))
-            pins.analogWritePin(pin, currentAngle);
+            pins.analogWritePin(pin, Math.map(auxCurrentAngle, 0, 1023, 0, maxServoValueAnalogWrite));
 
-            basic.pause(10 * (100 - speed)); // Ajuste de delay para controle de velocidade
+            basic.pause(10 * (100 - speed));  // Ajuste de delay para controle de velocidade
         }
         pins.analogWritePin(pin, deg);
-        console.log(pins.analogReadPin(pin))
+        currentAngle=deg
     }
 
     // /**
