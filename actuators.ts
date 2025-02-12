@@ -85,7 +85,7 @@ namespace actuators {
     //% group="Servo Motor"
     //% weight=10
     export function SetAngleServoGradually(deg: number, pin: OutputPorts, speed: number ) {
-        let step = speed / 1.8;  // Define a taxa de incremento
+        let step = speed / 4;  // Define a taxa de incremento
         let delayTime = Math.map(speed, 10, 100, 100, 0);
         let auxCurrentAngle = currentAngle;
         
