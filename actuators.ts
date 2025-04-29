@@ -21,7 +21,7 @@ namespace actuators {
     *  Define a velocidade do motor.
     * @param porta de saída da placa de expansão.
     */
-    //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed do motor na porta %pin"
+    //% blockId=velocityMotorIO block="Motor CC, definir velocidade %speed na porta %pin"
     //% speed.min=0 speed.max=1023
     //% group="Motor CC"
     //% weight=20
@@ -43,7 +43,7 @@ namespace actuators {
     *  Define a direção do motor.
     * @param porta de saída da placa de expansão.
     */
-    //% blockId=directionMotorIO block="Motor CC, definir direção do motor para %direction na porta %pin"
+    //% blockId=directionMotorIO block="Motor CC, definir direção para %direction na porta %pin"
     //% group="Motor CC"
     //% weight=10
     export function SetDirectionMotor(direction: MotorDirection, pin: OutputPorts) {
@@ -99,8 +99,8 @@ namespace actuators {
 
         else if (speed === Vel.Medium) {
             posicao = Math.constrain(posicao, 0, 1023);
-            const step = 11;
-            const delayTime = 10;
+            const step = 1;
+            const delayTime = 50;
             let angle = currentAngle
 
             while (angle != posicao) {
@@ -116,8 +116,8 @@ namespace actuators {
 
         else if (speed === Vel.Slow) {
             posicao = Math.constrain(posicao, 0, 1023);
-            const step = 11;
-            const delayTime = 50;
+            const step = 1;
+            const delayTime = 100;
             let angle = currentAngle
 
             while (angle != posicao) {
@@ -130,6 +130,6 @@ namespace actuators {
                 basic.pause(delayTime);
             }
         }
-        currentAngle = posicao
+        currentAngle = posicao;
     }
 }
