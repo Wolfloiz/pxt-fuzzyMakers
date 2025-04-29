@@ -79,57 +79,57 @@ namespace actuators {
         currentAngle = posicao;
         pins.analogWritePin(pin, posicao)
     }
-    /**
-        *  Define o ângulo e velocidade de mudança gradualmente para o modo knob do servo motor.
-        * @param porta de saída da placa de expansão.
-        * @param angulo de destino do servo
-        * @param velocidade de movimento do servo
-        */
-    //% blockId=angleServoSpeedKnobGIO block="Servo, definir posição %posicao porta %pin com velocidade %velocidade modo Knob"
-    //% posicao.min=0
-    //% posicao.max=1023
-    //% group="Servo Motor"
-    //% weight=10
-    export function SetAngleServoGradually(posicao: number, pin: OutputPorts, speed: Vel ) {
+    // /**
+    //     *  Define o ângulo e velocidade de mudança gradualmente para o modo knob do servo motor.
+    //     * @param porta de saída da placa de expansão.
+    //     * @param angulo de destino do servo
+    //     * @param velocidade de movimento do servo
+    //     */
+    // //% blockId=angleServoSpeedKnobGIO block="Servo, definir posição %posicao porta %pin com velocidade %velocidade modo Knob"
+    // //% posicao.min=0
+    // //% posicao.max=1023
+    // //% group="Servo Motor"
+    // //% weight=10
+    // export function SetAngleServoGradually(posicao: number, pin: OutputPorts, speed: Vel ) {
         
-        if(speed === Vel.High)
-        {
-            pins.analogWritePin(pin, posicao)
-        }
+    //     if(speed === Vel.High)
+    //     {
+    //         pins.analogWritePin(pin, posicao)
+    //     }
 
-        else if (speed === Vel.Medium) {
-            posicao = Math.constrain(posicao, 0, 1023);
-            const step = 1;
-            const delayTime = 50;
-            let angle = currentAngle
+    //     else if (speed === Vel.Medium) {
+    //         posicao = Math.constrain(posicao, 0, 1023);
+    //         const step = 1;
+    //         const delayTime = 50;
+    //         let angle = currentAngle
 
-            while (angle != posicao) {
-                angle += (angle < posicao) ? step : -step
-                pins.analogWritePin(
-                    pin,
-                    Math.map(angle, 0, 1023, 0, maxServoValueAnalogWrite)
-                )
+    //         while (angle != posicao) {
+    //             angle += (angle < posicao) ? step : -step
+    //             pins.analogWritePin(
+    //                 pin,
+    //                 Math.map(angle, 0, 1023, 0, maxServoValueAnalogWrite)
+    //             )
 
-                basic.pause(delayTime);
-            }
-        }
+    //             basic.pause(delayTime);
+    //         }
+    //     }
 
-        else if (speed === Vel.Slow) {
-            posicao = Math.constrain(posicao, 0, 1023);
-            const step = 1;
-            const delayTime = 100;
-            let angle = currentAngle
+    //     else if (speed === Vel.Slow) {
+    //         posicao = Math.constrain(posicao, 0, 1023);
+    //         const step = 1;
+    //         const delayTime = 100;
+    //         let angle = currentAngle
 
-            while (angle != posicao) {
-                angle += (angle < posicao) ? step : -step
-                pins.analogWritePin(
-                    pin,
-                    Math.map(angle, 0, 1023, 0, maxServoValueAnalogWrite)
-                )
+    //         while (angle != posicao) {
+    //             angle += (angle < posicao) ? step : -step
+    //             pins.analogWritePin(
+    //                 pin,
+    //                 Math.map(angle, 0, 1023, 0, maxServoValueAnalogWrite)
+    //             )
 
-                basic.pause(delayTime);
-            }
-        }
-        currentAngle = posicao;
-    }
+    //             basic.pause(delayTime);
+    //         }
+    //     }
+    //     currentAngle = posicao;
+    // }
 }
