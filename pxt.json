@@ -12,7 +12,9 @@
         "fuzzybot.ts",
         "actuators.ts",
         "sensors.ts",
-        "table.ts"
+        "table.ts",
+        "cameraSensor.ts",
+        "enum.d.ts"
     ],
     "testFiles": [
         "test.ts"
