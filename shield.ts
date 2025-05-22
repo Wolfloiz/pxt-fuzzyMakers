@@ -274,7 +274,7 @@ namespace shield {
     //% group="Receptor Infravermelho"
     //% color=#884898
     //% blockId=infrared_ir_datagram
-    //% block="IR datagram"
+    //% block="Datagrama do sensor infravermelho"
     //% weight=130
     export function irDatagram(): string {
         if (!irState) {
@@ -369,7 +369,7 @@ namespace shield {
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.columns=3
     //% button.fieldOptions.tooltips="false"
-    //% block="IR button code %button"
+    //% block="Código do botão infravermelho %button"
     //% weight=140
     export function irButtonCode(button: IrButton): number {
         return button as number;

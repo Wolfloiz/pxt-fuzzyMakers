@@ -5,7 +5,8 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "datalogger": "*"
+        "datalogger": "*",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1"
     },
     "files": [
         "README.md",
@@ -16,7 +17,8 @@
         "cameraSensor.ts",
         "enum.d.ts",
         "irControllerDefinition.ts",
-        "shield.ts"
+        "shield.ts",
+        "rgbLed.ts"
     ],
     "testFiles": [
         "test.ts"
