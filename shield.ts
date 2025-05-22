@@ -4,7 +4,7 @@ enum PingUnit {
     MicroSeconds,
     //% block="cm"
     Centimeters,
-    //% block="inches"
+    //% block="polegadas"
     Inches
 }
 
@@ -13,7 +13,7 @@ enum PingUnit {
 const enum IrButtonAction {
     //% block="pressed"
     Pressed = 0,
-    //% block="released"
+    //% block="não pressionado"
     Released = 1,
 }
 
@@ -254,7 +254,7 @@ namespace shield {
     //% group="Receptor Infravermelho"
     //% color=#884898
     //% blockId=infrared_on_ir_datagram
-    //% block="on IR datagram received"
+    //% block="Ao receber sinal IR"
     //% weight=200
     export function onIrDatagram(handler: () => void) {
         control.onEvent(
@@ -295,7 +295,7 @@ namespace shield {
     //% group="Receptor Infravermelho"
     //% color=#884898
     //% blockId=infrared_was_any_ir_datagram_received
-    //% block="dados do sensor infravermelhos foram recebidos"
+    //% block="Dados do sensor infravermelho foram recebidos"
     //% weight=190
     export function wasIrDataReceived(): boolean {
         if (!irState) {
@@ -349,7 +349,7 @@ namespace shield {
     //% group="Controle"
     //% color=#884898
     //% blockId=infrared_ir_button_pressed
-    //% block="botão IR pressionado"
+    //% block="Botão IR pressionado"
     //% weight=150
     export function irButton(): number {
         if (!irState) {
@@ -1226,7 +1226,7 @@ namespace shield {
         */
         //% subcategory="Display de digitos"
         //% color=#FFA300
-        //% blockId="TM1637_clear" block="limpar %tm"
+        //% blockId="TM1637_clear" block="Limpar %tm"
         //% weight=80 blockGap=8
         //% parts="TM1637"
         tmclear() {
@@ -1241,7 +1241,7 @@ namespace shield {
         */
         //% subcategory="Display de digitos"
         //% color=#FFA300
-        //% blockId="TM1637_on"  block="ligar %tm"
+        //% blockId="TM1637_on"  block="Ligar %tm"
         //% weight=86 blockGap=8
         //% parts="TM1637"
         on() {
@@ -1255,7 +1255,7 @@ namespace shield {
         */
         //% subcategory="Display de digitos"
         //% color=#FFA300
-        //% blockId="TM1637_off" block="desligar %t"
+        //% blockId="TM1637_off" block="Desligar %t"
         //% weight=85 blockGap=8
         //% parts="TM1637"
         off() {
