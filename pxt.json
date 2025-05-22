@@ -14,7 +14,9 @@
         "sensors.ts",
         "table.ts",
         "cameraSensor.ts",
-        "enum.d.ts"
+        "enum.d.ts",
+        "irControllerDefinition.ts",
+        "shield.ts"
     ],
     "testFiles": [
         "test.ts"
