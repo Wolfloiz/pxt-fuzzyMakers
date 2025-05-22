@@ -488,7 +488,7 @@ namespace rgbLed {
      * @param pin o pino ao qual o NeoPixel está conectado.
      * @param numleds número de LEDs na faixa, ex: 24, 30, 60, 64
     */
-    //% blockId="neopixel_create" block="NeoPixel no pino %pin|com %numleds|LEDs como %mode"
+    //% blockId="neopixel_create" block="LED RGB no pino %pin|com %numleds|LEDs como %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
@@ -551,7 +551,7 @@ namespace rgbLed {
      * @param s saturação de 0 a 99
      * @param l luminosidade de 0 a 99
     */
-    //% blockId=neopixelHSL block="matiz %h|saturação %s|luminosidade %l"
+    //% blockId=neopixelHSL block="Matiz %h|saturação %s|luminosidade %l"
     export function hsl(h: number, s: number, l: number): number {
         h = Math.round(h);
         s = Math.round(s);

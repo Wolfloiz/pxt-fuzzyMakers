@@ -11,7 +11,7 @@ enum PingUnit {
 // emum for c33 IR Receiver
 
 const enum IrButtonAction {
-    //% block="pressed"
+    //% block="pressionado"
     Pressed = 0,
     //% block="não pressionado"
     Released = 1,
