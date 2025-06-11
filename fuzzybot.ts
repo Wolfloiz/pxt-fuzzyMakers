@@ -19,7 +19,7 @@ interface KV {
     action: Action;
 }
 
-//% weight=100 color=#1e88e5 icon="\uf1b9" block="Fuzzy Bot"
+//% weight=100 color=#1e88e5 icon="\uf1b9" block="FuzzyBoT"
 //% groups=['micro:bit(v2)']
 namespace fuzzyBot {
     let kbCallback: KV[] = []

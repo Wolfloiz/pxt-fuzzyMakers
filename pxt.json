@@ -18,7 +18,8 @@
         "enum.d.ts",
         "irControllerDefinition.ts",
         "shield.ts",
-        "rgbLed.ts"
+        "rgbLed.ts",
+        "joystick.ts"
     ],
     "testFiles": [
         "test.ts"
