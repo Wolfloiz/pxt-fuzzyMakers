@@ -10,7 +10,7 @@ namespace joystick {
     /**
     * Obtem o valor da alavanca movimento no eixo x.
     */
-    //% blockId="stickHorizontal" block="Valor horizontal da alavanca"
+    //% blockId="stickHorizontal" block="Valor do eixo X da alavanca"
     //% weight=10
     //% group="Alavanca"
     export function HorizontalStick(): number {
@@ -21,7 +21,7 @@ namespace joystick {
     /**
     * Obtem o valor da alavanca movimento no eixo y.
     */
-    //% blockId="stickVertical" block="Valor vertical da alavanca"
+    //% blockId="stickVertical" block="Valor do eixo Y da alavanca"
     //% weight=10
     //% group="Alavanca"
     export function VerticalStick(): number {
@@ -32,7 +32,7 @@ namespace joystick {
     /**
     * Obtem o valor da barra deslizante.
     */
-    //% blockId="SliderDimmer" block="Valor da barra deslizante"
+    //% blockId="SliderDimmer" block="Valor da barra deslizante (E)"
     //% weight=10
     //% group="Barra deslizante"
     export function SliderDimmer(): number {
@@ -45,7 +45,7 @@ namespace joystick {
     /**
     * Obtem o estado do botão da alavanca.
     */
-    //% blockId="ButtonStick" block="Botão alavanca é pressionado"
+    //% blockId="ButtonStick" block="Botão alavanca é pressionado (Z)"
     //% weight=10
     //% group="Alavanca"
     export function StickButton(): number {
@@ -56,7 +56,7 @@ namespace joystick {
     /**
     * Obtem o estado do botão frontal preto
     */
-    //% blockId="BlackFrontalButton" block="Botão preto frontal é pressionado"
+    //% blockId="BlackFrontalButton" block="Botão A é pressionado"
     //% weight=10
     //% group="Botões"
     export function BlackFrontalButton(): number {
@@ -67,7 +67,7 @@ namespace joystick {
     /**
     * Obtem o estado do botão frontal vermelho
     */
-    //% blockId="RedFrontalButton" block="Botão vermelho frontal é pressionado"
+    //% blockId="RedFrontalButton" block="Botão B é pressionado"
     //% weight=10
     //% group="Botões"
     export function RedFrontalButton(): number {
@@ -78,7 +78,7 @@ namespace joystick {
     /**
     * Obtem o estado do botão superior vermelho
     */
-    //% blockId="RedUpButton" block="Botão vermelho superior é pressionado"
+    //% blockId="RedUpButton" block="Botão C é pressionado"
     //% weight=10
     //% group="Botões"
     export function RedUpButton(): number {
@@ -89,7 +89,7 @@ namespace joystick {
     /**
     * Obtem o estado do botão superior preto
     */
-    //% blockId="BlackUpButton" block="Botão preto superior é pressionado"
+    //% blockId="BlackUpButton" block="Botão D é pressionado"
     //% weight=10
     //% group="Botões"
     export function BlackUpButton(): number {
