@@ -59,4 +59,40 @@ enum MotorDirection {
         let analogReadPort = pins.analogReadPin(pin);
         return analogReadPort;
     }
+
+        /**
+         * Obtem o valor do sensor de som na porta determinada.
+         * @param porta de entrada da placa de expansão.
+         */
+        //% blockId=soundSensorIO block="Valor do sensor de som na porta %pin"
+        //% weight=10
+        //% group="Sensor de som"
+        export function soundSensorValue(pin: InputPorts): number {
+            let analogReadPort = pins.analogReadPin(pin);
+            return analogReadPort;
+        }
+
+        /**
+         * Obtem o valor do sensor de luz na porta determinada.
+         * @param porta de entrada da placa de expansão.
+         */
+        //% blockId=lightSensorIO block="Valor do sensor de luz na porta %pin"
+        //% weight=10
+        //% group="Sensor de luz"
+        export function lightSensorValue(pin: InputPorts): number {
+            let analogReadPort = pins.analogReadPin(pin);
+            return analogReadPort;
+        }
+
+        /**
+         * Obtem o valor do fim de curso na porta determinada.
+         * @param porta de entrada da placa de expansão.
+         */
+        //% blockId=endstopIO block="Valor da chave fim de curso na porta %pin"
+        //% weight=10
+        //% group="Fim de curso"
+        export function endstopValue(pin: InputPorts): number {
+            let digitalReadPort = pins.digitalReadPin(pin);
+            return digitalReadPort;
+        }
 }
