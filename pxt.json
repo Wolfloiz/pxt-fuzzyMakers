@@ -19,7 +19,18 @@
         "irControllerDefinition.ts",
         "shield.ts",
         "rgbLed.ts",
-        "joystick.ts"
+        "joystick.ts",
+        "Sengo2.cpp",
+        "Sengo2.h",
+        "lib/SentryFactory.cpp",
+        "lib/SentryFactory.h",
+        "lib/sentry_stream_base.h",
+        "lib/sentry_type.h",
+        "lib/sentry_uart.cpp",
+        "lib/sentry_uart.h",
+        "lib/sentry_i2c.cpp",
+        "lib/sentry_i2c.h",
+        "lib/debug/debug_tool.h"
     ],
     "testFiles": [
         "test.ts"
