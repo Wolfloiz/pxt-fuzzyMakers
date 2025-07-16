@@ -40,7 +40,7 @@ enum NeoPixelMode {
  * Funções para operar faixas de LEDs NeoPixel.
  */
 
-//% block="LEDS RGB" weight=5 color=#2699BF icon="\uf110"
+//% block="LEDS RGB" weight=5 color=#2699BF icon="\uf110" weight=120
 namespace rgbLed {
     /**
      * A NeoPixel strip

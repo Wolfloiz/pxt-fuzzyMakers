@@ -3,7 +3,7 @@
  * Biblioteca do joystick do Fuzzy bot
  */
 
-//% block="Joystick" color=#FFD43A icon="\uf11b"
+//% block="Joystick" color=#FFD43A icon="\uf11b" weight=130
 //% groups="['Alavanca', 'Barra deslizante', 'Botões']"
 namespace joystick {
 

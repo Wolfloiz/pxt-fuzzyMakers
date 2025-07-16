@@ -16,7 +16,6 @@
         "table.ts",
         "cameraSensor.ts",
         "irControllerDefinition.ts",
-        "shield.ts",
         "rgbLed.ts",
         "joystick.ts",
         "Sengo2.cpp",
