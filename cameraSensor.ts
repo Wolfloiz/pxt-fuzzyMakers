@@ -72,9 +72,9 @@ declare const enum sentry_mode_e {
 }
 
 declare const enum sengo2_status {
-    //% block="Habilitado"
+    //% block="Habilitar"
     Enable = 1,
-    //% block="Desabilitado"
+    //% block="Desabilitar"
     Disable = 0,
 }
 
@@ -249,7 +249,7 @@ namespace Camera {
     /**
     * Inicia camera
     */
-    //% blockId=Sentry_begin block="inicializar camera %mode |endereço %addr"
+    //% blockId=Sentry_begin block="Inicializar camera - Porta %mode - Endereço %addr"
     //% mode.defl=sentry_mode_e.kI2CMode
     //% group="Configuração"
     //% weight=100
@@ -285,7 +285,7 @@ namespace Camera {
     * @param id ID do Sentry
     * @param wb tipo de balanço de branco.
     */
-    //% blockId=Sentry_camera_set_awb block="Definir modo de balanço de branco da camera para %wb"
+    //% blockId=Sentry_camera_set_awb block="Configurar balanço de branco da camera para %wb"
     //% weight=99 inlineInputMode=inline
     //% group="Configuração"
     //% blockHidden=true
@@ -296,7 +296,7 @@ namespace Camera {
     /**
     * Ativa ou desativa uma função de visão da camera.
     */
-    //% blockId=Sengo2_vision_Set block="Ligar ou desligar visão %vision_type na camera: %enable"
+    //% blockId=Sengo2_vision_Set block="%enable modo %vision_type"
     //% group="Configuração"
     //% weight=98
     export function VisionSetStatus(
@@ -311,7 +311,7 @@ namespace Camera {
      * @param vision_type tipo de visão.
      * @param max_num número máximo de conjuntos de parâmetros.
     */
-    //% blockId=Sengo2_vision_SetParamNum block="Definir %max_num conjuntos de parâmetros para visão %vision_type da camera"
+    //% blockId=Sengo2_vision_SetParamNum block="Definir quantidade de parâmetros do modo %vision_type: %max_num"
     //% max_num.min=1 max_num.max=25 max_num.defl=1
     //% group="Configuração"
     //% weight=97
@@ -326,7 +326,7 @@ namespace Camera {
      * @param w largura da área de interesse.
      * @param h altura da área de interesse.
     */
-    //% blockId=Sengo2_vision_color_param block="Definir visão de cor da camera: X %x | Y %y | Largura %w | Altura %h | Conjunto de parâmetros %obj_id"
+    //% blockId=Sengo2_vision_color_param block="Definir parâmetros do modo cor: Coord X: %x | Coord. Y %y |Largura %w | Altura %h | ID %obj_id"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% x.defl=50
     //% y.defl=50
@@ -359,7 +359,7 @@ namespace Camera {
      * @param h altura mínima a detectar.
      * @param l rótulo da cor a detectar.
     */
-    //% blockId=Sengo2_vision_blob_param block="Camera visão de blob: largura mínima %w | altura mínima %h | cor %l | conjunto %obj_id"
+    //% blockId=Sengo2_vision_blob_param block="Definir parâmetros do modo blob: largura mínima %w | altura mínima %h | cor %l | ID %obj_id"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% w.defl=3
     //% h.defl=4
@@ -389,7 +389,7 @@ namespace Camera {
      * @param vision_type tipo de visão.
      * @param mode número máximo de blobs por cor (1–5).
      */
-    //% blockId=Sengo2_vision_SetMaxBlobParam block="Definir na camera o número máximo de blobs por cor (1–5): %mode"
+    //% blockId=Sengo2_vision_SetMaxBlobParam block="Definir número máximo de blobs por cor (1–5): %mode"
     //% mode.min=1 mode.max=5 mode.defl=1
     //% group="Configuração"
     //% weight=94
@@ -402,7 +402,7 @@ namespace Camera {
      * @param vision_type tipo de visão.
      * @param mode número máximo de AprilTags (formato padrão).
     */
-    //% blockId=Sengo2_vision_SetMaxAprilTagParam block="Definir padrão de AprilTag na camera: máximo %mode tags"
+    //% blockId=Sengo2_vision_SetMaxAprilTagParam block="Definir formato de AprilTag: %mode tags"
     //% group="Configuração"
     //% weight=93
     export function SetMaxAprilTagParam(mode: apriltag_vision_mode_e) {
@@ -414,7 +414,7 @@ namespace Camera {
      * @param vision_type tipo de visão.
      * @param mode número máximo de linhas (1–5).
     */
-    //% blockId=Sengo2_vision_SetMaxLineParam block="Definir na camera o número máximo de linhas (1–5): %mode"
+    //% blockId=Sengo2_vision_SetMaxLineParam block="Definir número máximo de segmentos (1-5) no modo linha: %mode"
     //% mode.min=1 mode.max=5 mode.defl=1
     //% group="Configuração"
     //% weight=92
@@ -428,7 +428,7 @@ namespace Camera {
      * @param l rótulo ou categoria detectada.
      * @param face_id ID atribuído ao item detectado.
     */
-    //% blockId=Sengo2_vision_id block="Camera: definir ID %face_id para %vision_type com rótulo %l"
+    //% blockId=Sengo2_vision_id block="%l ID %face_id no modo %vision_type"
     //% face_id.min=1 face_id.max=10 face_id.defl=1
     //% inlineInputMode=inline
     //% group="Configuração"
@@ -447,7 +447,7 @@ namespace Camera {
      * Obtém o número de resultados detectados pela visão.
      * @param vision_type tipo de visão.
     */
-    //% blockId=Sengo_detected block="Camera: número de resultados detectados para %vision_type" color="#2E8B57"
+    //% blockId=Sengo_detected block="Resultados detectados no modo %vision_type" color="#2E8B57"
     //% group="Operações" advanced=false
     //% weight=94
     export function Detected(vision_type: sengo_vision_e): number {
@@ -459,7 +459,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, tamanho, etc.)
      * @param obj_id índice do objeto
     */
-    //% blockId=Sengo2_get_color_value block="Camera: obter %object_info do resultado %obj_id da visão de cor" color="#2E8B57"
+    //% blockId=Sengo2_get_color_value block="%objeto_info da configuração %obj_id do modo cor" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -482,7 +482,7 @@ namespace Camera {
      * @param object_info informação desejada do objeto (posição, tamanho, ID, etc.).
      * @param obj_id índice do objeto.
      */
-    //% blockId=Sengo2_get_value block="Camera: %object_info do resultado %obj_id da visão %vision_type" color="#2E8B57"
+    //% blockId=Sengo2_get_value block="Resultado de %object_info da configuração %id do modo %vision_type" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -501,7 +501,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, ângulo, etc.).
      * @param obj_id índice do objeto (linha detectada).
      */
-    //% blockId=Sengo2_get_Line_value block="Camera: %object_info do resultado %obj_id da visão de linha" color="#2E8B57"
+    //% blockId=Sengo2_get_Line_value block="%objeto_info da configuração %obj_id do modo linha" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -523,7 +523,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (dados, posição, etc.).
      * @param obj_id índice do QR Code detectado.
     */
-    //% blockId=Sengo2_get_qr_value block="Camera: %object_info do resultado %obj_id da visão QR Code" color="#2E8B57"
+    //% blockId=Sengo2_get_qr_value block="%objeto_info da configuração %obj_id do modo QR code" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -543,7 +543,7 @@ namespace Camera {
     /**
      * Obtém o texto decodificado de um QR Code detectado pelo Camera.
     */
-    //% blockId=Sengo2_get_Qrcode_value_string block="Camera: texto decodificado do QR Code" color="#2E8B57"
+    //% blockId=Sengo2_get_Qrcode_value_string block="Texto decodificado do QR Code" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -558,7 +558,7 @@ namespace Camera {
      * @param lable rótulo da cor.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_color block="Camera: cor %lable reconhecida no resultado %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_color block="Cor %lable reconhecida da configuração %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=87
@@ -580,7 +580,7 @@ namespace Camera {
      * @param lable rótulo da Blob.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_blob block="Camera: blob %lable detectada no resultado %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_blob block="Blob %lable detectado da configuração %obj_id" color="#2E8B57"
     //% lable.defl=color_label_e.kColorRed
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
@@ -603,7 +603,7 @@ namespace Camera {
      * @param lable rótulo do cartão.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_card block="Camera: cartão %lable reconhecido no resultado %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_card block="Cartão %lable detectado da configuração %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=85
@@ -625,7 +625,7 @@ namespace Camera {
      * @param lable rótulo da classe.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sentry_detected_class20 block="Camera: classe 20Class %lable reconhecida no resultado %obj_id" color="#2E8B57"
+    //% blockId=Sentry_detected_class20 block="Classe %lable detectada da configuração %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=84

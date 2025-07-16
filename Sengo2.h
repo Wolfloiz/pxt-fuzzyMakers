@@ -33,25 +33,25 @@ public:
 
   enum sengo_vision_e
   {
-    //% block="Color"
+     //% block="Cor"
     kVisionColor = 1,
     //% block="Blob"
     kVisionBlob = 2,
     //% block="AprilTag"
     kVisionAprilTag = 3,
-    //% block="Line"
+    //% block="Linha"
     kVisionLine = 4,
-    //% block="Learning"
+    //% block="Aprendizado"
     kVisionLearning = 5,
-    //% block="Card"
+    //% block="Cartão"
     kVisionCard = 6,
-    //% block="Face"
+    //% block="Rosto"
     kVisionFace = 7,
-    //% block="20Class"
+    //% block="20Classes"
     kVision20Classes = 8,
-    //% block="QrCode"
+    //% block="QR code"
     kVisionQrCode = 9,
-    //% block="Motion"
+    //% block="Movimento"
     kVisionMotionDetect = 11,
     //% blockHidden=true
     kVisionMaxType,
@@ -65,85 +65,85 @@ public:
   /* Sentry card label */
   enum card_label_e
   {
-    //% block="Forward"
+    //% block="Frente"
     kCardForward = 1,
-    //% block="Left"
+    //% block="Esquerda"
     kCardLeft = 2,
-    //% block="Right"
+    //% block="Direita"
     kCardRight = 3,
-    //% block="Turn Around"
+    //% block="Retornar"
     kCardTurnAround = 4,
-    //% block="Park"
+    //% block="Estacionar"
     kCardPark = 5,
-    //% block="Green Light"
+    //% block="Luz verde"
     kCardGreenLight = 6,
-    //% block="Red Light"
+    //% block="Luz vermelha"
     kCardRedLight = 7,
-    //% block="Speed 40"
+    //% block="Velocidade 40"
     kCardSpeed40 = 8,
-    //% block="Speed 60"
+    //% block="Velocidade 60"
     kCardSpeed60 = 9,
-    //% block="Speed 80"
-    kCardSpeed80 = 10,
+    //% block="Velocidade 80"
+    kCardSpeed80 = 10
   };
   /* SentryFactory 20 classes label */
   enum class20_label_e
   {
-    //% block="Airplane"
+   //% block="Avião"
     kAirplane = 1,
-    //% block="Bicycle"
+    //% block="Bicicleta"
     kBicycle = 2,
-    //% block="Bird"
+    //% block="Pássaro"
     kBird = 3,
-    //% block="Boat"
+    //% block="Barco"
     kBoat = 4,
-    //% block="Bottle"
+    //% block="Garrafa"
     kBottle = 5,
-    //% block="Bus"
+    //% block="Ônibus"
     kBus = 6,
-    //% block="Car"
+    //% block="Carro"
     kCar = 7,
-    //% block="Cat"
+    //% block="Gato"
     kCat = 8,
-    //% block="Chair"
+    //% block="Cadeira"
     kChair = 9,
-    //% block="Cow"
+    //% block="Vaca"
     kCow = 10,
-    //% block="DiningTable"
+    //% block="Mesa"
     kDiningTable = 11,
-    //% block="Dog"
+    //% block="Cachorro"
     kDog = 12,
-    //% block="Horse"
+    //% block="Cavalo"
     kHorse = 13,
-    //% block="MotorBike"
+    //% block="Moto"
     kMotorBike = 14,
-    //% block="Person"
+    //% block="Pessoa"
     kPerson = 15,
-    //% block="PottedPlant"
+    //% block="Planta em vaso"
     kPottedPlant = 16,
-    //% block="Sheep"
+    //% block="Ovelha"
     kSheep = 17,
-    //% block="Sofa"
+    //% block="Sofá"
     kSofa = 18,
-    //% block="Train"
+    //% block="Trem"
     kTrain = 19,
-    //% block="TvMonitor"
+    //% block="Televisão"
     kTvMonitor = 20
   };
   /* SentryFactory color label */
   enum color_label_e
   {
-    //% block="Black"
+     //% block="Preto"
     kColorBlack = 1,
-    //% block="White"
+    //% block="Branco"
     kColorWhite = 2,
-    //% block="Red"
+    //% block="Vermelho"
     kColorRed = 3,
-    //% block="Green"
+    //% block="Verde"
     kColorGreen = 4,
-    //% block="Blue"
+    //% block="Azul"
     kColorBlue = 5,
-    //% block="Yellow"
+    //% block="Amarelo"
     kColorYellow = 6
   };
   /* AprilTag vision mode */
