@@ -1,6 +1,6 @@
 {
     "name": "Fuzzy Makers",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Uma extensão para o micro:bit dos kits Fuzzy Makers.",
     "license": "MIT",
     "dependencies": {
@@ -15,7 +15,6 @@
         "sensors.ts",
         "table.ts",
         "cameraSensor.ts",
-        "enum.d.ts",
         "irControllerDefinition.ts",
         "shield.ts",
         "rgbLed.ts",
@@ -30,13 +29,14 @@
         "lib/sentry_uart.h",
         "lib/sentry_i2c.cpp",
         "lib/sentry_i2c.h",
-        "lib/debug/debug_tool.h"
+        "lib/debug/debug_tool.h",
+        "enums.d.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "7.0.61",
+        "target": "8.0.8",
         "targetId": "microbit"
     },
     "supportedTargets": [
