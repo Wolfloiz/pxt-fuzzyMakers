@@ -28,11 +28,11 @@ enum NeoPixelColors {
  * Different modes for RGB or RGB+W NeoPixel strips
  */
 enum NeoPixelMode {
-    //% block="RGB (GRB format)"
+    //% block="RGB (GRB formato)"
     RGB = 1,
     //% block="RGB+W"
     RGBW = 2,
-    //% block="RGB (RGB format)"
+    //% block="RGB (RGB formato)"
     RGB_RGB = 3
 }
 
@@ -60,7 +60,7 @@ namespace rgbLed {
          * @param rgb cor RGB dos LEDs
         */
         //% blockId="neopixel_set_strip_color" block="%strip|mostrar cor %rgb=neopixel_colors"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showColor(rgb: number) {
@@ -75,7 +75,7 @@ namespace rgbLed {
          * @param endHue valor final de matiz para o arco-íris, ex: 360
         */
         //% blockId="neopixel_set_strip_rainbow" block="%strip|mostrar arco-íris de %startHue|até %endHue"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showRainbow(startHue: number = 1, endHue: number = 360) {
@@ -143,7 +143,7 @@ namespace rgbLed {
         */
         //% weight=84
         //% blockId=neopixel_show_bar_graph block="%strip|mostrar gráfico de barras do valor %value|até %high"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% icon="\uf080"
         //% parts="neopixel"
         showBarGraph(value: number, high: number): void {
@@ -181,7 +181,7 @@ namespace rgbLed {
          * @param rgb cor RGB do LED
         */
         //% blockId="neopixel_set_pixel_color" block="%strip|definir cor do pixel na posição %pixeloffset|para %rgb=neopixel_colors"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -194,7 +194,7 @@ namespace rgbLed {
          * @param width número de pixels por linha
         */
         //% blockId=neopixel_set_matrix_width block="%strip|definir largura da matriz como %width"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% blockGap=8
         //% weight=5
         //% parts="neopixel" advanced=true
@@ -210,7 +210,7 @@ namespace rgbLed {
          * @param rgb cor RGB do LED
         */
         //% blockId="neopixel_set_matrix_color" block="%strip|definir cor da matriz na posição x %x|y %y|para %rgb=neopixel_colors"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=4
         //% parts="neopixel" advanced=true
         setMatrixColor(x: number, y: number, rgb: number) {
@@ -230,7 +230,7 @@ namespace rgbLed {
          * @param white brilho do LED branco
         */
         //% blockId="neopixel_set_pixel_white" block="%strip|definir brilho do LED branco na posição %pixeloffset|para %white"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -244,7 +244,7 @@ namespace rgbLed {
          * Envia todas as alterações para a faixa de LEDs.
         */
         //% blockId="neopixel_show" block="%strip|mostrar" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=79
         //% parts="neopixel"
         show() {
@@ -258,7 +258,7 @@ namespace rgbLed {
          * É necessário chamar ``show`` para que as alterações fiquem visíveis.
         */
         //% blockId="neopixel_clear" block="%strip|limpar"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=76
         //% parts="neopixel"
         clear(): void {
@@ -270,7 +270,7 @@ namespace rgbLed {
          * Obtém o número de pixels declarados na faixa.
         */
         //% blockId="neopixel_length" block=%strip|comprimento" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=60 advanced=true
         length() {
             return this._length;
@@ -281,7 +281,7 @@ namespace rgbLed {
          * @param brightness nível de brilho dos LEDs entre 0 e 255. ex: 255
         */
         //% blockId="neopixel_set_brightness" block="%strip|definir brilho %brightness" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=59
         //% parts="neopixel" advanced=true
         setBrightness(brightness: number): void {
@@ -292,7 +292,7 @@ namespace rgbLed {
          * Aplica o brilho às cores atuais usando uma função de suavização quadrática.
         */
         //% blockId="neopixel_each_brightness" block="%strip|suavizar brilho" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=58
         //% parts="neopixel" advanced=true
         easeBrightness(): void {
@@ -323,9 +323,9 @@ namespace rgbLed {
         */
         //% weight=89
         //% blockId="neopixel_range" block="%strip|intervalo de %start|com %length|LEDs"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% parts="neopixel"
-        //% blockSetVariable=range
+        //% blockSetVariable=intervalo
         range(start: number, length: number): Strip {
             start = start >> 0;
             length = length >> 0;
@@ -346,7 +346,7 @@ namespace rgbLed {
          * @param offset número de pixels a deslocar para frente, ex: 1
         */
         //% blockId="neopixel_shift" block="%strip|deslocar pixels em %offset" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=40
         //% parts="neopixel"
         shift(offset: number = 1): void {
@@ -361,7 +361,7 @@ namespace rgbLed {
          * @param offset número de pixels a rotacionar para frente, ex: 1
         */
         //% blockId="neopixel_rotate" block="%strip|rotacionar pixels em %offset" blockGap=8
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% weight=39
         //% parts="neopixel"
         rotate(offset: number = 1): void {
@@ -385,7 +385,7 @@ namespace rgbLed {
          * Estima a corrente elétrica (mA) consumida pela configuração atual dos LEDs.
         */
         //% weight=9 blockId=neopixel_power block="%strip|potência (mA)"
-        //% strip.defl=strip
+        //% strip.defl=LEDs
         //% advanced=true
         power(): number {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -492,7 +492,7 @@ namespace rgbLed {
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
-    //% blockSetVariable=strip
+    //% blockSetVariable=LEDs
     export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): Strip {
         let strip = new Strip();
         let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
