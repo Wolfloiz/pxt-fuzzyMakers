@@ -269,7 +269,7 @@ namespace rgbLed {
         /**
          * Obtém o número de pixels declarados na faixa.
         */
-        //% blockId="neopixel_length" block=%strip|comprimento" blockGap=8
+        //% blockId="neopixel_length" block="%strip|comprimento" blockGap=8
         //% strip.defl=LEDs
         //% weight=60 advanced=true
         length() {
