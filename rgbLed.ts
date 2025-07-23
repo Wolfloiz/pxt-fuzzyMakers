@@ -491,6 +491,8 @@ namespace rgbLed {
     //% blockId="neopixel_create" block="LED RGB no pino %pin|com %numleds|LEDs como %mode"
     //% weight=90 blockGap=8
     //% parts="neopixel"
+    //% pin.defl=DigitalPin.P15
+    //% numleds.defl=4
     //% trackArgs=0,2
     //% blockSetVariable=LEDs
     export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): Strip {
@@ -504,6 +506,7 @@ namespace rgbLed {
         strip.setBrightness(128)
         strip.setPin(pin)
         return strip;
+        
     }
 
     /**

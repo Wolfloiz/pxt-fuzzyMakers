@@ -172,7 +172,7 @@ declare const enum sengo2_addr_e {
     ADDR4 = 0x63,
 }
 
-//% block="Sensor Camera"color="#ff6600" weight=20 icon="\uf085"
+//% block="Sensor Câmera"color="#ff6600" weight=20 icon="\uf085"
 //% advanced=true
 namespace Camera {
     const SENTRY_OK = 0x00;
@@ -247,9 +247,9 @@ namespace Camera {
     }
 
     /**
-    * Inicia camera
+    * Inicia Câmera
     */
-    //% blockId=Sentry_begin block="Inicializar camera - Porta %mode - Endereço %addr"
+    //% blockId=Sentry_begin block="Inicializar Câmera - Porta %mode - Endereço %addr"
     //% mode.defl=sentry_mode_e.kI2CMode
     //% group="Configuração"
     //% weight=100
@@ -259,12 +259,12 @@ namespace Camera {
 
     /**
      * Define a cor dos LEDs.
-     * @param id ID da Camera
+     * @param id ID da Câmera
      * @param led tipo de LED.
      * @param detected_color cor do LED quando o sensor detectar o alvo.
      * @param undetected_color cor do LED quando o sensor não detectar o alvo.
      */
-    //% blockId=Sengo2_led_set_color block="Definir cor dos LEDs da camera para %detected_color|quando detectar alvo, senão %undetected_color com brilho (1-15) %leval"
+    //% blockId=Sengo2_led_set_color block="Definir cor dos LEDs da Câmera para %detected_color|quando detectar alvo, senão %undetected_color com brilho (1-15) %leval"
     //% detected_color.defl=sentry_led_color_e.kLedBlue
     //% undetected_color.defl=sentry_led_color_e.kLedRed
     //% leval.min=0 leval.max=15 leval.defl=1
@@ -285,7 +285,7 @@ namespace Camera {
     * @param id ID do Sentry
     * @param wb tipo de balanço de branco.
     */
-    //% blockId=Sentry_camera_set_awb block="Configurar balanço de branco da camera para %wb"
+    //% blockId=Sentry_camera_set_awb block="Configurar balanço de branco da Câmera para %wb"
     //% weight=99 inlineInputMode=inline
     //% group="Configuração"
     //% blockHidden=true
@@ -294,7 +294,7 @@ namespace Camera {
     }
 
     /**
-    * Ativa ou desativa uma função de visão da camera.
+    * Ativa ou desativa uma função de visão da Câmera.
     */
     //% blockId=Sengo2_vision_Set block="%enable modo %vision_type"
     //% group="Configuração"
@@ -477,7 +477,7 @@ namespace Camera {
     }
 
     /**
-     * Obtém os dados do objeto detectado pela visão da camera. Esta função atualiza automaticamente as informações do objeto.
+     * Obtém os dados do objeto detectado pela visão da Câmera. Esta função atualiza automaticamente as informações do objeto.
      * @param vision_type tipo de visão.
      * @param object_info informação desejada do objeto (posição, tamanho, ID, etc.).
      * @param obj_id índice do objeto.
@@ -497,7 +497,7 @@ namespace Camera {
     }
 
     /**
-     * Obtém o resultado da detecção de linhas pela visão da camera.
+     * Obtém o resultado da detecção de linhas pela visão da Câmera.
      * @param object_info tipo de informação desejada (posição, ângulo, etc.).
      * @param obj_id índice do objeto (linha detectada).
      */
@@ -519,7 +519,7 @@ namespace Camera {
     }
 
     /**
-     * Obtém o resultado da leitura de QR Code pela visão da Camera.
+     * Obtém o resultado da leitura de QR Code pela visão da Câmera.
      * @param object_info tipo de informação desejada (dados, posição, etc.).
      * @param obj_id índice do QR Code detectado.
     */
@@ -541,7 +541,7 @@ namespace Camera {
     }
 
     /**
-     * Obtém o texto decodificado de um QR Code detectado pelo Camera.
+     * Obtém o texto decodificado de um QR Code detectado pelo Câmera.
     */
     //% blockId=Sengo2_get_Qrcode_value_string block="Texto decodificado do QR Code" color="#2E8B57"
     //% inlineInputMode=inline
