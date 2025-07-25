@@ -311,7 +311,7 @@ namespace Camera {
      * @param vision_type tipo de visão.
      * @param max_num número máximo de conjuntos de parâmetros.
     */
-    //% blockId=Sengo2_vision_SetParamNum block="Definir quantidade de parâmetros do modo %vision_type: %max_num"
+    //% blockId=Sengo2_vision_SetParamNum block="Definir quantidade de configurações do modo %vision_type: %max_num"
     //% max_num.min=1 max_num.max=25 max_num.defl=1
     //% group="Configuração"
     //% weight=97
@@ -434,7 +434,7 @@ namespace Camera {
     //% group="Configuração"
     //% weight=91
 
-    export function SetVisionIdParam(vision_type: sengo_vision_e_3, l: vison_id_op_e, face_id: number = 1) {
+    export function SetVisionIdParam(l: vison_id_op_e, face_id: number = 1, vision_type: sengo_vision_e_3) {
         let prama = pins.createBuffer(10);
 
         prama.setNumber(NumberFormat.UInt16BE, 8, l);
@@ -489,9 +489,10 @@ namespace Camera {
     //% group="Operações"
     //% weight=92
     export function GetValue(
-        vision_type: sengo_vision_e_1,
         object_info: sentry_obj_info_e,
-        obj_id: number = 1
+        obj_id: number = 1,
+        vision_type: sengo_vision_e_1,
+        
     ): number {
         return sengo2_GetValue(<number>vision_type, <number>object_info, obj_id);
     }
@@ -534,9 +535,9 @@ namespace Camera {
         obj_id: number = 1
     ): number {
         return GetValue(
-            <number>sengo_vision_e.kVisionQrCode,
             <number>object_info,
-            obj_id
+            obj_id,
+            <number>sengo_vision_e.kVisionQrCode
         );
     }
 
@@ -591,9 +592,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
-                sengo_vision_e_1.kVisionBlob,
                 sentry_obj_info_e.kLabel,
-                obj_id
+                obj_id,
+                sengo_vision_e_1.kVisionBlob
             ) == lable
         );
     }
@@ -613,9 +614,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
-                sengo_vision_e_1.kVisionCard,
                 sentry_obj_info_e.kLabel,
-                obj_id
+                obj_id,
+                sengo_vision_e_1.kVisionCard
             ) == lable
         );
     }
@@ -635,9 +636,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
-                sengo_vision_e_1.kVision20Classes,
                 sentry_obj_info_e.kLabel,
-                obj_id
+                obj_id,
+                sengo_vision_e_1.kVision20Classes,
             ) == lable
         );
     }
