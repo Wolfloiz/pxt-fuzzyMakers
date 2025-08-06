@@ -84,7 +84,7 @@ namespace actuators {
     *  Define intesidade de som do buzzer na porta determinada
     * @param porta de saída da placa de expansão.
     */
-    //% blockId=buzzerIO block="Buzina, definir intensidade do som %sound na porta %pin"
+    //% blockId=buzzerIO block="Buzina, definir volume do som %sound na porta %pin"
     //% sound.min=0
     //% sound.max=1023
     //% group="Buzina"
@@ -97,7 +97,7 @@ namespace actuators {
     *  Define intesidade de brilho do LED na porta determinada
     * @param porta de saída da placa de expansão.
     */
-    //% blockId=LEDIO block="LED de alto brihlo, definir intensidade do brilho %bright na porta %pin"
+    //% blockId=LEDIO block="LED de alto brilho, definir brilho %bright na porta %pin"
     //% bright.min=0
     //% bright.max=1023
     //% group="LED"
