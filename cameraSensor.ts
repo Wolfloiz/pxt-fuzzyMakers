@@ -482,7 +482,7 @@ namespace Camera {
      * @param object_info informação desejada do objeto (posição, tamanho, ID, etc.).
      * @param obj_id índice do objeto.
      */
-    //% blockId=Sengo2_get_value block="Resultado de %object_info da configuração %id do modo %vision_type" color="#2E8B57"
+    //% blockId=Sengo2_get_value block="Resultado de %object_info da configuração %obj_id do modo %vision_type" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
