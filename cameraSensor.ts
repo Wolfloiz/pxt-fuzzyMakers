@@ -459,7 +459,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, tamanho, etc.)
      * @param obj_id índice do objeto
     */
-    //% blockId=Sengo2_get_color_value block="%objeto_info da configuração %obj_id do modo cor" color="#2E8B57"
+    //% blockId=Sengo2_get_color_value block="%objeto_info do resultado %obj_id do modo cor" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -502,7 +502,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, ângulo, etc.).
      * @param obj_id índice do objeto (linha detectada).
      */
-    //% blockId=Sengo2_get_Line_value block="%objeto_info da configuração %obj_id do modo linha" color="#2E8B57"
+    //% blockId=Sengo2_get_Line_value block="%objeto_info do resultado %obj_id do modo linha" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -524,7 +524,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (dados, posição, etc.).
      * @param obj_id índice do QR Code detectado.
     */
-    //% blockId=Sengo2_get_qr_value block="%objeto_info da configuração %obj_id do modo QR code" color="#2E8B57"
+    //% blockId=Sengo2_get_qr_value block="%objeto_info do resultado %obj_id do modo QR code" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -559,7 +559,7 @@ namespace Camera {
      * @param lable rótulo da cor.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_color block="Cor %lable reconhecida da configuração %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_color block="Cor %lable reconhecida do resultado %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=87
@@ -581,7 +581,7 @@ namespace Camera {
      * @param lable rótulo da Blob.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_blob block="Blob %lable detectado da configuração %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_blob block="Blob %lable detectado do resultado %obj_id" color="#2E8B57"
     //% lable.defl=color_label_e.kColorRed
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
@@ -604,7 +604,7 @@ namespace Camera {
      * @param lable rótulo do cartão.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sengo2_detected_card block="Cartão %lable detectado da configuração %obj_id" color="#2E8B57"
+    //% blockId=Sengo2_detected_card block="Cartão %lable detectado do resultado %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=85
@@ -626,7 +626,7 @@ namespace Camera {
      * @param lable rótulo da classe.
      * @param obj_id índice do objeto.
     */
-    //% blockId=Sentry_detected_class20 block="Classe %lable detectada da configuração %obj_id" color="#2E8B57"
+    //% blockId=Sentry_detected_class20 block="Classe %lable detectada do resultado %obj_id" color="#2E8B57"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
     //% group="Operações"
     //% weight=84
