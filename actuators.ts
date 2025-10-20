@@ -10,6 +10,7 @@ Medium,
 //% block="Devagar"
 Slow
 }
+
 //% block="Atuadores" weight=200 color=#89D333 icon="\uf109"
 //% groups="['Motor CC', 'Servo Motor']"
 namespace actuators {
