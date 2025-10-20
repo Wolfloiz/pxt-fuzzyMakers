@@ -6,7 +6,7 @@ enum DiagonalDirection {
     Right = 1,
 }
 
-//% block="Smart" color="#ff9900" weight=10 icon="\uf17b"
+//% block="Smart" color="#ff9900" weight=10 icon="\uf144"
 //% advanced=true
 //% groups="['Robô escriba', 'Servo']"
 namespace Smart {
