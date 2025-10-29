@@ -33,7 +33,7 @@ namespace Smart {
     */
     //% blockId=upDirection block="Mover caneta para cima %step"
     //% step.min=0 step.max=5
-    //% step.defalt=1
+    //% step.defl=1
     //% group="Robô escriba"
     //% weight=20
     export function upServo(step: number) {
@@ -48,7 +48,7 @@ namespace Smart {
         * @param Define o angulo do servo motor
         */
     //% blockId=downDirection block="Mover caneta para baixo %step"
-    //% step.min=0 step.max=5
+    //% step.min=0 step.max=5 step.defl=1
     //% group="Robô escriba"
     //% weight=20
     export function downServo(step: number) {
@@ -63,7 +63,7 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
      */
     //% blockId=roboescriba_right block="Mover caneta para direita %qtd"
-    //%
+    //% qtd.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveRight(qtd: number) {
@@ -78,7 +78,7 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
      */
     //% blockId=roboescriba_esquerda block="Mover caneta para esquerda %qtd"
-    //%
+    //% qtd.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveLeft(qtd: number) {
@@ -93,6 +93,7 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
     */
     //% blockId=roboescriba_diagonal block="%direction caneta na diagonal %distance"
+    //% distance.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveDiagonal(direction: DiagonalDirection, distance: number) {
