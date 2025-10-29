@@ -1,8 +1,8 @@
 
 enum DiagonalDirection {
-    //% block="Esquerda"
+    //% block="Subir"
     Left = 0,
-    //% block="Direita"
+    //% block="Descer"
     Right = 1,
 }
 
@@ -24,15 +24,16 @@ class Constellation {
 
 //% block="Smart" color="#ff9900" weight=10 icon="\uf144"
 //% advanced=true
-//% groups="['Robô escriba', 'Servo']"
+//% groups="['Robô Escriba', 'Servo']"
 namespace Smart {
 
     /**
         *  Define o robô para cima
         * @param Define o angulo do servo motor
     */
-    //% blockId=upDirection block="Mover servo para cima com o passo %step"
+    //% blockId=upDirection block="Mover caneta para cima %step"
     //% step.min=0 step.max=5
+    //% step.defalt=1
     //% group="Robô escriba"
     //% weight=20
     export function upServo(step: number) {
@@ -46,7 +47,7 @@ namespace Smart {
         *  Define o robô para baixo
         * @param Define o angulo do servo motor
         */
-    //% blockId=downDirection block="Mover servo para baixo com o passo %step"
+    //% blockId=downDirection block="Mover caneta para baixo %step"
     //% step.min=0 step.max=5
     //% group="Robô escriba"
     //% weight=20
@@ -61,7 +62,7 @@ namespace Smart {
      * Move o robô para a direita durante daterminado tempo.
      * @param tempo Segundos (aproximados) para girar as rodas
      */
-    //% blockId=roboescriba_right block="Mover robô para a direita %qtd vezes"
+    //% blockId=roboescriba_right block="Mover caneta para direita %qtd"
     //%
     //% group="Robô escriba"
     //% weight=80
@@ -76,7 +77,7 @@ namespace Smart {
      * Move o robô para a esquerda durante daterminado tempo.
      * @param tempo Segundos (aproximados) para girar as rodas
      */
-    //% blockId=roboescriba_esquerda block="Mover robô para a esquerda %qtd vezes"
+    //% blockId=roboescriba_esquerda block="Mover caneta para esquerda %qtd"
     //%
     //% group="Robô escriba"
     //% weight=80
@@ -91,7 +92,7 @@ namespace Smart {
      * Move o robô para a diagonal durante daterminada ditância.
      * @param tempo Segundos (aproximados) para girar as rodas
     */
-    //% blockId=roboescriba_diagonal block="Mover robô na diagonal no sentido %direction distância %distance"
+    //% blockId=roboescriba_diagonal block="%direction caneta na diagonal %distance"
     //% group="Robô escriba"
     //% weight=80
     export function moveDiagonal(direction: DiagonalDirection, distance: number) {
