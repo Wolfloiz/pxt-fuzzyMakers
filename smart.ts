@@ -32,7 +32,7 @@ namespace Smart {
         * @param Define o angulo do servo motor
     */
     //% blockId=upDirection block="Mover caneta para cima %step"
-    //% step.min=0 step.max=5
+    //% step.min=0 step.max=2
     //% step.defl=1
     //% group="Robô escriba"
     //% weight=20
@@ -48,7 +48,7 @@ namespace Smart {
         * @param Define o angulo do servo motor
         */
     //% blockId=downDirection block="Mover caneta para baixo %step"
-    //% step.min=0 step.max=5 step.defl=1
+    //% step.min=0 step.max=2 step.defl=1
     //% group="Robô escriba"
     //% weight=20
     export function downServo(step: number) {
