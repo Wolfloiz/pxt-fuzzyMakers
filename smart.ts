@@ -44,6 +44,7 @@ namespace Smart {
 
     export function robotScribe() {
         y = 415;
+        actuators.SetAngleServoKnob(y, OutputPorts.P8)
     }
 
     /**
@@ -111,12 +112,11 @@ namespace Smart {
      * Move o robô para a diagonal durante daterminada ditância.
      * @param tempo Segundos (aproximados) para girar as rodas
     */
-    //% blockId=roboescriba_diagonal block="%direction caneta na diagonal para %way %distance"
+    //% blockId=robotescribe_diagonal block="%direction caneta na diagonal para %way %distance"
     //% distance.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveDiagonal(direction: DiagonalWay, way: DiagonalDirection, distance: number) {
-        let y = 415
         if (way == 0) {
             actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
         } else {
