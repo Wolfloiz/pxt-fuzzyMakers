@@ -1,11 +1,17 @@
 
-enum DiagonalDirection {
+enum DiagonalWay {
     //% block="Subir"
-    Left = 0,
+    Up = 0,
     //% block="Descer"
-    Right = 1,
+    Down = 1,
 }
 
+enum DiagonalDirection {
+    //% block="Subir"
+    Front = 0,
+    //% block="Descer"
+    Back = 1,
+}
 class Constellation {
     xi: number;
     yi: number;
@@ -37,9 +43,8 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function upServo(step: number) {
-        let posServo = step * 250
-        if (posServo > 1023) posServo = 1023
-        pins.analogWritePin(AnalogPin.P8, posServo)
+       let y = step * 207
+        actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
     }
 
@@ -52,9 +57,8 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function downServo(step: number) {
-        let posServo = step * -250
-        if (posServo < 0) posServo = 0
-        pins.analogWritePin(AnalogPin.P8, posServo)
+        let y = step * -207
+        actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
     }
 
@@ -70,7 +74,8 @@ namespace Smart {
         actuators.SetSpeedMotor(1023, OutputPorts.P16)
         actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
         basic.pause(qtd * 750)
-        actuators.StopMotor(OutputPorts.P16);
+        actuators.StopMotor(OutputPorts.P16)
+        basic.pause(1000)
     }
 
     /**
@@ -83,9 +88,10 @@ namespace Smart {
     //% weight=80
     export function moveLeft(qtd: number) {
         actuators.SetSpeedMotor(1023, OutputPorts.P16)
-        actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12);
-        basic.pause(qtd * 750);
-        actuators.StopMotor(OutputPorts.P16);
+        actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        basic.pause(qtd * 750)
+        actuators.StopMotor(OutputPorts.P16)
+        basic.pause(1000)
     }
 
     /**
@@ -96,22 +102,25 @@ namespace Smart {
     //% distance.defl=1
     //% group="Robô escriba"
     //% weight=80
-    export function moveDiagonal(direction: DiagonalDirection, distance: number) {
-        let speed =500;
-        actuators.SetSpeedMotor(1023, OutputPorts.P16);
-
-        if (direction == DiagonalDirection.Left) {
-            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12);
+    export function moveDiagonal(direction: DiagonalDirection, sense: DiagonalWay, distance: number) {
+        let y = 415
+        if (sense == 0) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
         } else {
-            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12);
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
         }
-
-        for (let index = 0; index < 5; index++) {
-            speed = distance * 51
-            actuators.SetAngleServoKnob(speed, OutputPorts.P8);
-            basic.pause(150);
+        actuators.SetSpeedMotor(1023, OutputPorts.P16)
+        for (let index = 0; index <= 9; index++) {
+            if (direction == 0) {
+                y += distance * 20
+            } else {
+                y += distance * -20
+            }
+            actuators.SetAngleServoKnob(y, OutputPorts.P8)
+            basic.pause(80)
         }
-        actuators.StopMotor(OutputPorts.P16);
+        actuators.StopMotor(OutputPorts.P16)
+        basic.pause(1000)
     }
 
     // Observatório Astronômico
