@@ -32,6 +32,19 @@ class Constellation {
 //% advanced=true
 //% groups="['Robô Escriba', 'Servo']"
 namespace Smart {
+    let y = 0;
+
+    /**
+       *  Define a variável y
+       * @param Define o angulo do servo motor
+   */
+    //% blockId=upDirection block="Iniciar robô escriba"
+    //% group="Robô escriba"
+    //% weight=20
+
+    export function robotScribe() {
+        y = 415;
+    }
 
     /**
         *  Define o robô para cima
@@ -43,7 +56,6 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function upServo(step: number) {
-       let y = 415;
        y += step * 207;
         actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
@@ -58,7 +70,6 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function downServo(step: number) {
-        let y = 415
         y += step * -207
         actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
