@@ -43,7 +43,8 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function upServo(step: number) {
-       let y = step * 207
+       let y = 415;
+       y += step * 207;
         actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
     }
@@ -57,7 +58,8 @@ namespace Smart {
     //% group="Robô escriba"
     //% weight=20
     export function downServo(step: number) {
-        let y = step * -207
+        let y = 415
+        y += step * -207
         actuators.SetAngleServoKnob(y, OutputPorts.P8)
         basic.pause(1000)
     }
