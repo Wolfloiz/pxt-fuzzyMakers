@@ -7,9 +7,9 @@ enum DiagonalWay {
 }
 
 enum DiagonalDirection {
-    //% block="Subir"
+    //% block="Frente"
     Front = 0,
-    //% block="Descer"
+    //% block="Trás"
     Back = 1,
 }
 class Constellation {
@@ -98,13 +98,13 @@ namespace Smart {
      * Move o robô para a diagonal durante daterminada ditância.
      * @param tempo Segundos (aproximados) para girar as rodas
     */
-    //% blockId=roboescriba_diagonal block="%direction caneta na diagonal %distance"
+    //% blockId=roboescriba_diagonal block="%direction caneta na diagonal para %way %distance"
     //% distance.defl=1
     //% group="Robô escriba"
     //% weight=80
-    export function moveDiagonal(direction: DiagonalDirection, sense: DiagonalWay, distance: number) {
+    export function moveDiagonal(direction: DiagonalWay, way: DiagonalDirection, distance: number) {
         let y = 415
-        if (sense == 0) {
+        if (way == 0) {
             actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
         } else {
             actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
