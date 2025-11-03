@@ -38,7 +38,7 @@ namespace Smart {
        *  Define a variável y
        * @param Define o angulo do servo motor
    */
-    //% blockId=upDirection block="Iniciar robô escriba"
+    //% blockId=startRobotEscribe block="Iniciar robô escriba"
     //% group="Robô escriba"
     //% weight=20
 
