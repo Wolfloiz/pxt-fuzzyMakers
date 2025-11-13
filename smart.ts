@@ -115,6 +115,7 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
     */
     //% blockId=robotescribe_diagonal block="%direction caneta na diagonal para %way %distance"
+    //% qtd.min=0 qtd.max=2
     //% distance.defl=1
     //% group="Robô escriba"
     //% weight=80
