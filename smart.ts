@@ -81,13 +81,14 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
      */
     //% blockId=roboescriba_right block="Mover caneta para direita %qtd"
+    //% qtd.min=0 qtd.max=2
     //% qtd.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveRight(qtd: number) {
         actuators.SetSpeedMotor(1023, OutputPorts.P16)
         actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
-        basic.pause(qtd * 750)
+        basic.pause(qtd * 450)
         actuators.StopMotor(OutputPorts.P16)
         basic.pause(1000)
     }
@@ -97,13 +98,14 @@ namespace Smart {
      * @param tempo Segundos (aproximados) para girar as rodas
      */
     //% blockId=roboescriba_esquerda block="Mover caneta para esquerda %qtd"
+    //% qtd.min=0 qtd.max=2
     //% qtd.defl=1
     //% group="Robô escriba"
     //% weight=80
     export function moveLeft(qtd: number) {
         actuators.SetSpeedMotor(1023, OutputPorts.P16)
         actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
-        basic.pause(qtd * 750)
+        basic.pause(qtd * 450)
         actuators.StopMotor(OutputPorts.P16)
         basic.pause(1000)
     }
