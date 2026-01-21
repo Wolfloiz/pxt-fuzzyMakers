@@ -212,7 +212,7 @@ namespace fuzzyBot {
 
     //% weight=90
     //% blockId=servo_ServoRun block="servo|%index|definir para ângulo|%angle"
-    //% angle.min=0 angle.max=180
+    //% angle.min=0 angle.max=270
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% group="Acessórios"
     export function servoRun(index: Servos, angle: number): void {
