@@ -459,7 +459,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, tamanho, etc.)
      * @param obj_id índice do objeto
     */
-    //% blockId=Sengo2_get_color_value block="%objeto_info do resultado %obj_id do modo cor" color="#2E8B57"
+    //% blockId=Sengo2_get_color_value block="%object_info do resultado %obj_id do modo cor" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -502,7 +502,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (posição, ângulo, etc.).
      * @param obj_id índice do objeto (linha detectada).
      */
-    //% blockId=Sengo2_get_Line_value block="%objeto_info do resultado %obj_id do modo linha" color="#2E8B57"
+    //% blockId=Sengo2_get_Line_value block="%object_info do resultado %obj_id do modo linha" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -524,7 +524,7 @@ namespace Camera {
      * @param object_info tipo de informação desejada (dados, posição, etc.).
      * @param obj_id índice do QR Code detectado.
     */
-    //% blockId=Sengo2_get_qr_value block="%objeto_info do resultado %obj_id do modo QR code" color="#2E8B57"
+    //% blockId=Sengo2_get_qr_value block="%object_info do resultado %obj_id do modo QR code" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
