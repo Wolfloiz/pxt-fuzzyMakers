@@ -489,10 +489,9 @@ namespace Camera {
     //% group="Operações"
     //% weight=92
     export function GetValue(
+        vision_type: sengo_vision_e_1,
         object_info: sentry_obj_info_e,
         obj_id: number = 1,
-        vision_type: sengo_vision_e_1,
-        
     ): number {
         return sengo2_GetValue(<number>vision_type, <number>object_info, obj_id);
     }
