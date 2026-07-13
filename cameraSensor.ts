@@ -591,9 +591,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
-                sentry_obj_info_e.kLabel,
+                sengo_vision_e_1.kVisionBlob,
                 obj_id,
-                sengo_vision_e_1.kVisionBlob
+                sentry_obj_info_e.kLabel
             ) == lable
         );
     }
@@ -613,9 +613,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
-                sentry_obj_info_e.kLabel,
+                sengo_vision_e_1.kVisionCard,
                 obj_id,
-                sengo_vision_e_1.kVisionCard
+                sentry_obj_info_e.kLabel,
             ) == lable
         );
     }
@@ -635,9 +635,9 @@ namespace Camera {
     ): boolean {
         return (
             GetValue(
+                sengo_vision_e_1.kVision20Classes,
                 sentry_obj_info_e.kLabel,
                 obj_id,
-                sengo_vision_e_1.kVision20Classes,
             ) == lable
         );
     }

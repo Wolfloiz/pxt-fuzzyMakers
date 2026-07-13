@@ -1,6 +1,6 @@
 {
     "name": "Fuzzy Makers",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Uma extensão para o micro:bit dos kits Fuzzy Makers.",
     "license": "MIT",
     "dependencies": {
