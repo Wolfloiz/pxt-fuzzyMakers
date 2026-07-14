@@ -482,7 +482,7 @@ namespace Camera {
      * @param object_info informação desejada do objeto (posição, tamanho, ID, etc.).
      * @param obj_id índice do objeto.
      */
-    //% blockId=Sengo2_get_value block="%object_info do resultado %id do modo %vision_type" color="#2E8B57"
+    //% blockId=Sengo2_get_value block="%object_info do resultado %obj_id do modo %vision_type" color="#2E8B57"
     //% inlineInputMode=inline
     //% expandableArgumentMode="enabled"
     //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
@@ -534,9 +534,9 @@ namespace Camera {
         obj_id: number = 1
     ): number {
         return GetValue(
+            <number>sengo_vision_e.kVisionQrCode,
             <number>object_info,
-            obj_id,
-            <number>sengo_vision_e.kVisionQrCode
+            obj_id
         );
     }
 
@@ -592,8 +592,8 @@ namespace Camera {
         return (
             GetValue(
                 sengo_vision_e_1.kVisionBlob,
-                obj_id,
-                sentry_obj_info_e.kLabel
+                sentry_obj_info_e.kLabel,
+                obj_id
             ) == lable
         );
     }
@@ -614,8 +614,8 @@ namespace Camera {
         return (
             GetValue(
                 sengo_vision_e_1.kVisionCard,
-                obj_id,
                 sentry_obj_info_e.kLabel,
+                obj_id
             ) == lable
         );
     }
